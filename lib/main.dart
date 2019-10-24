@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'list.dart';
+import 'groupList.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -21,6 +22,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Fast UI'),
+      routes: <String, WidgetBuilder> {
+        // 这里可以定义静态路由，不能传递参数
+        '/router/list': (_) => new List(),
+        '/router/grouplist':(_)=> new GroupList(),
+      },
     );
   }
 }
@@ -44,7 +50,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _dataSource = <String>["布局","登录","model","后裔","西施","貂蝉"];
+  final _dataSource = <String>["List","登录","model","后裔","西施","貂蝉"];
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+
       body: _buildListView(context),
     );
   }
@@ -85,6 +92,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       trailing: Icon(Icons.keyboard_arrow_right),
       onTap:() {
+        if(index == 0) {
+          Navigator.of(context).pushNamed('/router/list');
+        } else if (index == 1) {
+          Navigator.of(context).pushNamed('/router/grouplist');
+        }
 
       },
     );
