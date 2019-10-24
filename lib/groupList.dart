@@ -42,7 +42,7 @@ class _GroupListState extends State<GroupList> {
 
   Widget _buildListHead() {
     return new Container(
-      height: 100,
+      height: 120,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -87,27 +87,27 @@ class _GroupListState extends State<GroupList> {
                             style:
                                 TextStyle(fontSize: 16, color: Colors.black38),
                           ),
-
                           Container(
                             alignment: Alignment.centerRight,
-                            child:Row(children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.only(right: 5),
-                              child: Icon(
-                                Icons.insert_chart,
-                                color: Colors.black45,
-                              ),
+                            child: Row(
+                              children: <Widget>[
+                                Padding(
+                                  padding: EdgeInsets.only(right: 5),
+                                  child: Icon(
+                                    Icons.insert_chart,
+                                    color: Colors.black45,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(right: 16),
+                                  child: Icon(
+                                    Icons.keyboard_arrow_right,
+                                    color: Colors.black45,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(right: 16),
-                              child: Icon(
-                                Icons.keyboard_arrow_right,
-                                color: Colors.black45,
-                              ),
-                            ),
-
-                          ],),)
-
+                          )
                         ],
                       )
                     ],
