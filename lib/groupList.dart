@@ -91,20 +91,34 @@ class _GroupListState extends State<GroupList> {
                             alignment: Alignment.centerRight,
                             child: Row(
                               children: <Widget>[
-                                Padding(
-                                  padding: EdgeInsets.only(right: 5),
-                                  child: Icon(
-                                    Icons.insert_chart,
-                                    color: Colors.black45,
-                                  ),
+                                Icon(
+                                  Icons.insert_chart,
+                                  color: Colors.black45,
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.only(right: 16),
-                                  child: Icon(
-                                    Icons.keyboard_arrow_right,
-                                    color: Colors.black45,
-                                  ),
+//                                Padding(
+//                                  padding: EdgeInsets.only(right: 5),
+//                                  child: Icon(
+//                                    Icons.insert_chart,
+//                                    color: Colors.black45,
+//                                  ),
+//                               ),
+                                SizedBox(
+                                  width: 5,
                                 ),
+                                Icon(
+                                  Icons.keyboard_arrow_right,
+                                  color: Colors.black45,
+                                ),
+                                SizedBox(
+                                  width: 16,
+                                ),
+//                               Padding(
+//                                  padding: EdgeInsets.only(right: 16),
+//                                  child: Icon(
+//                                    Icons.keyboard_arrow_right,
+//                                    color: Colors.black45,
+//                                  ),
+//                                ),
                               ],
                             ),
                           )
